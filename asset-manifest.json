@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/design-demo-app/static/css/main.5739ad41.chunk.css",
+    "main.js": "/design-demo-app/static/js/main.3a8d7c34.chunk.js",
+    "main.js.map": "/design-demo-app/static/js/main.3a8d7c34.chunk.js.map",
+    "runtime-main.js": "/design-demo-app/static/js/runtime-main.72dcb4ef.js",
+    "runtime-main.js.map": "/design-demo-app/static/js/runtime-main.72dcb4ef.js.map",
+    "static/js/2.2e63703a.chunk.js": "/design-demo-app/static/js/2.2e63703a.chunk.js",
+    "static/js/2.2e63703a.chunk.js.map": "/design-demo-app/static/js/2.2e63703a.chunk.js.map",
+    "static/js/3.fb937ecf.chunk.js": "/design-demo-app/static/js/3.fb937ecf.chunk.js",
+    "static/js/3.fb937ecf.chunk.js.map": "/design-demo-app/static/js/3.fb937ecf.chunk.js.map",
+    "index.html": "/design-demo-app/index.html",
+    "static/css/main.5739ad41.chunk.css.map": "/design-demo-app/static/css/main.5739ad41.chunk.css.map",
+    "static/js/2.2e63703a.chunk.js.LICENSE.txt": "/design-demo-app/static/js/2.2e63703a.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/design-demo-app/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.72dcb4ef.js",
+    "static/js/2.2e63703a.chunk.js",
+    "static/css/main.5739ad41.chunk.css",
+    "static/js/main.3a8d7c34.chunk.js"
+  ]
+}
