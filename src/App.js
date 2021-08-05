@@ -134,7 +134,7 @@ const SelectMenu = () => {
       />
       <CardMedia
         className={classes.media}
-        image="/salmon.jpg"
+        image="./salmon.jpg"
         title="鮭のムニエル"
       />
       <CardContent>
@@ -178,7 +178,7 @@ const SelectMenu = () => {
       />
       <CardMedia
         className={classes.media}
-        image="/beef-tongue.jpg"
+        image="./beef-tongue.jpg"
         title="牛タン"
       />
       <CardContent>
@@ -221,12 +221,7 @@ const SelectMenu = () => {
 const App = () => {
   return (
     <div>
-      <BrowserRouter>
-        <div>
-          <Redirect to ="/byoinshoku/hogehoge" />
-          <Route path="/byoinshoku/hogehoge" exact component={SelectMenu} />
-        </div>
-      </BrowserRouter>
+      <SelectMenu />
     </div>
   );
 }
