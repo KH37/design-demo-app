@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import React from "react"
-import { BrowserRouter, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Route, Link, Redirect } from 'react-router-dom';
 import Paper from '@material-ui/core/Paper';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -68,7 +68,10 @@ const useStyles = makeStyles((theme) => ({
   },
   avatarD:{
     backgroundColor: "blue"
-  }
+  },
+  cardFont:{
+    fontSize:"18px"
+  },
 }));
 
 const SelectMenu = () => {
@@ -127,11 +130,6 @@ const SelectMenu = () => {
             A
           </Avatar>
         }
-        // action={
-        //   <IconButton aria-label="settings">
-        //     <MoreVertIcon />
-        //   </IconButton>
-        // }
         title="鮭のムニエル"
       />
       <CardMedia
@@ -140,17 +138,11 @@ const SelectMenu = () => {
         title="鮭のムニエル"
       />
       <CardContent>
-        <Typography variant="body2" color="textSecondary" component="p">
+        <Typography variant="body2" color="textSecondary" component="p" className={classes.cardFont}>
           ------ここにこだわりのポイントを記入------------------ここにこだわりのポイントを記入------------------ここにこだわりのポイントを記入------------
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        {/* <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
-        </IconButton>
-        <IconButton aria-label="share">
-          <ShareIcon />
-        </IconButton> */}
         <IconButton
           className={clsx(classes.expand, {
             [classes.expandOpen]: expanded,
@@ -164,24 +156,14 @@ const SelectMenu = () => {
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          <Typography paragraph>こちらの料理について</Typography>
-          <Typography paragraph>
+          <Typography paragraph className={classes.cardFont}>こちらの料理について</Typography>
+          <Typography paragraph className={classes.cardFont}>
             --------------ここに料理の説明-----------------------------------ここに料理の説明-----------------------------------ここに料理の説明-----------------------------------ここに料理の説明---------------------
           </Typography>
-          <Typography paragraph>栄養価</Typography>
-          <Typography paragraph>
+          <Typography paragraph className={classes.cardFont}>栄養価</Typography>
+          <Typography paragraph className={classes.cardFont}>
             ビタミンB、ビタミンC、タンパク質、糖質....-----ここに栄養価を記入-------
           </Typography>
-          {/* <Typography paragraph>
-            Add rice and stir very gently to distribute. Top with artichokes and peppers, and cook
-            without stirring, until most of the liquid is absorbed, 15 to 18 minutes. Reduce heat to
-            medium-low, add reserved shrimp and mussels, tucking them down into the rice, and cook
-            again without stirring, until mussels have opened and rice is just tender, 5 to 7
-            minutes more. (Discard any mussels that don’t open.)
-          </Typography>
-          <Typography>
-            Set aside off of the heat to let rest for 10 minutes, and then serve.
-          </Typography> */}
         </CardContent>
       </Collapse>
     </Card>
@@ -192,11 +174,6 @@ const SelectMenu = () => {
             D
           </Avatar>
         }
-        // action={
-        //   <IconButton aria-label="settings">
-        //     <MoreVertIcon />
-        //   </IconButton>
-        // }
         title="牛タン"
       />
       <CardMedia
@@ -205,19 +182,13 @@ const SelectMenu = () => {
         title="牛タン"
       />
       <CardContent>
-        <Typography variant="body2" color="textSecondary" component="p">
+        <Typography variant="body2" color="textSecondary" component="p" className={classes.cardFont}>
           ------ここにこだわりのポイントを記入------------------ここにこだわりのポイントを記入------------------ここにこだわりのポイントを記入------------
 
 
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        {/* <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
-        </IconButton>
-        <IconButton aria-label="share">
-          <ShareIcon />
-        </IconButton> */}
         <IconButton
           className={clsx(classes.expand, {
             [classes.expandOpen]: expandedD,
@@ -231,24 +202,14 @@ const SelectMenu = () => {
       </CardActions>
       <Collapse in={expandedD} timeout="auto" unmountOnExit>
         <CardContent>
-          <Typography paragraph>こちらの料理について</Typography>
-          <Typography paragraph>
+          <Typography paragraph className={classes.cardFont}>こちらの料理について</Typography>
+          <Typography paragraph className={classes.cardFont}>
             --------------ここに料理の説明-----------------------------------ここに料理の説明-----------------------------------ここに料理の説明-----------------------------------ここに料理の説明---------------------
           </Typography>
-          <Typography paragraph>栄養価</Typography>
-          <Typography paragraph>
+          <Typography paragraph className={classes.cardFont}>栄養価</Typography>
+          <Typography paragraph className={classes.cardFont}>
             ビタミンB、ビタミンC、タンパク質、糖質....-----ここに栄養価を記入-------
           </Typography>
-          {/* <Typography paragraph>
-            Add rice and stir very gently to distribute. Top with artichokes and peppers, and cook
-            without stirring, until most of the liquid is absorbed, 15 to 18 minutes. Reduce heat to
-            medium-low, add reserved shrimp and mussels, tucking them down into the rice, and cook
-            again without stirring, until mussels have opened and rice is just tender, 5 to 7
-            minutes more. (Discard any mussels that don’t open.)
-          </Typography>
-          <Typography>
-            Set aside off of the heat to let rest for 10 minutes, and then serve.
-          </Typography> */}
         </CardContent>
       </Collapse>
     </Card>
@@ -262,8 +223,8 @@ const App = () => {
     <div>
       <BrowserRouter>
         <div>
+          <Redirect to ="/byoinshoku/hogehoge" />
           <Route path="/byoinshoku/hogehoge" exact component={SelectMenu} />
-          {/* <Route path="/pagetwo"  component={PageTwo} /> */}
         </div>
       </BrowserRouter>
     </div>
